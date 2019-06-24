@@ -1,0 +1,57 @@
+
+
+.logoArea{
+  vertical-align: middle;
+  margin-right: 100px !important;
+}
+
+
+.ant-select-selection{
+  background-color: rgba(219, 180, 116,0) !important;
+  border: none !important;
+}
+
+.ant-select-selection:focus{
+  border: none !important;
+}
+
+.languageSelector b{
+  color: black !important;
+}
+
+.header h2{
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+
+
+@media (max-width:1024px){
+  .header{
+    text-align: left;
+    width:100%;
+    padding: 10px 0 0 0;
+  }
+  .header h2{
+    font-size: 13px;
+    font-weight: 800;
+    padding-left: 20px;
+  }
+  .logoArea{
+    margin-right: 0 !important;
+  }
+
+  .logoArea img{
+    width: 100px;
+  }
+
+  .headerTitles div{
+    margin-right: 30px;
+  }
+
+  .socialMedia img{
+    margin: 0 5px !important;
+    vertical-align:middle;
+  }
+}

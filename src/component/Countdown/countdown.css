@@ -1,0 +1,90 @@
+.Countdown{
+  margin: 10px auto;
+  padding-bottom: 20px;
+}
+
+.Countdown-col{
+  display: inline-block;
+}
+
+.Countdown-col-element{
+  display: inline-block;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element strong{
+  font-size: 80px;
+  color:white;
+}
+
+.Countdown-small{
+  margin: 0;
+}
+
+.Countdown-col-small{
+  display: inline-block;
+}
+
+.Countdown-col-element-small{
+  display: inline-block;
+  margin: 0 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element-small strong{
+  font-size: 16px;
+  color:lightgrey;
+}
+
+@media (max-width: 800px) {
+  .Countdown-col-element{
+    margin: 0 10px;
+  }
+  .Countdown-col-element strong{
+    font-size: 35px;
+  }
+  .Countdown{
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .Countdown-col-element-small{
+    margin: 0 1px;
+  }
+  .Countdown-col-element-small strong{
+    font-size: 12px;
+  }
+  .Countdown-small{
+    margin: 0;
+    padding-bottom: 2px;
+  }
+}
+
+
+.Countdown-col-2{
+  display: inline-block;
+}
+
+.Countdown-col-element-2{
+  display: inline-block;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element-2 strong{
+  font-size: 40px;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .Countdown-col-element{
+    margin: 0 3px;
+  }
+  .Countdown-col-element-2 strong{
+    font-size: 25px;
+  }
+}

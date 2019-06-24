@@ -1,0 +1,94 @@
+
+.homePage{
+  color: white;
+}
+
+.homePageBackground{
+  background: url('../../assets/images/homePage/bg_bak.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  length: 100%;
+  padding: 400px 50px 10px 50px;
+}
+
+.BackgroundSlogen{
+  text-align: right;
+  padding: 100px 0;
+}
+
+.BackgroundSlogen h1{
+  color: white;
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.GameSection{
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.GameSection h2{
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.GameTitle{
+  margin-bottom: 30px;
+}
+.GameTitle h1{
+  color: white;
+  font-weight: 650;
+  font-size: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: table-cell;
+  border-bottom: solid 2.5px #E5004F;
+  -webkit-box-shadow:0 5px 10px -10px #E5004F;
+  -moz-box-shadow:0 5px 10px -10px #E5004F;
+  box-shadow:0 5px 10px -10px #E5004F;
+}
+
+.GameSection img:hover{
+  cursor: pointer;
+}
+
+.GameSection img:active{
+  opacity: 0.8;
+}
+
+@media (max-width:800px){
+  .homePageBackground{
+    margin-top: -10px;
+    padding: 180px 15px 20px 50px;
+  }
+
+  .BackgroundSlogen{
+    padding: 50px;
+  }
+
+  .BackgroundSlogen h1{
+    font-weight: 700;
+    font-size: 35px;
+  }
+
+  .GameTitle h1{
+    color: white;
+    font-weight: 650;
+    font-size: 20px;
+  }
+
+  .GameSection{
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .GameTitle{
+    margin-bottom: 15px;
+  }
+
+  .GameSection h2{
+    font-size: 13px;
+  }
+}

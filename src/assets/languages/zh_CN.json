@@ -1,0 +1,97 @@
+{
+  "waykiMax":{
+    "waykiMaxRequired":"需要安装WayKi钱包",
+    "waykiMaxIntro1":"使用“维基天堂”平台需要安装“维基钱包”。",
+    "waykiMaxIntro2":"安装完成后刷新本页面。",
+    "waykiMaxInstallHere":"可以从Chrome扩展程序安装。",
+    "loginRequired":"需要登录“维基钱包”",
+    "loginIntro":"已检测到“维基钱包”, 需要从“维基钱包”钱包登录。你可以从chrome浏览器扩展程序栏中打开它，创建一个钱包或者引入你之前拥有的钱包以登录。"
+  },
+
+  "notification":{
+    "comingSoon":"敬请期待！",
+    "waykiMaxLogin":"请登录您的“维基钱包”钱包!",
+    "changeNetwork":"请登录到“维基钱包”主网络！",
+    "noBalance":"余额不足！",
+    "systemUpgrading":"系统升级中",
+    "waykiMaxRequired":"请安装“维基钱包”并从钱包中登录",
+    "confirmationDeclined":"用户拒绝了交易签名",
+    "NetworkError":"网络错误，请刷新页面后重试",
+    "waitingBetConfirm":"请等待下注上链 (10~20秒)",
+    "betConfirmed":"您的下注已成功上链，随机数产生中。。。(10~20秒)",
+    "useMainnet":"请切换到维基主网"
+  },
+
+  "header":{
+    "loginButton":"登录钱包",
+    "whitepaper":"白皮书"
+  },
+
+  "homePage":{
+    "waykiParadise":"维基天堂",
+    "games":"游戏",
+    "cooperation":"合作",
+    "gemRush":"宝石争霸",
+    "luckyNumber":"幸运猜数字",
+    "comingSoon":"敬请期待"
+  },
+
+  "luckyNumber":{
+    "prediction":"预测",
+    "luckyNumber":"幸运猜数字",
+    "max":"最大",
+    "autoBet":"自动投注",
+    "rollUnder":"猜小于",
+    "rollOver":"猜大于",
+    "wiccBalance":"WICC余额:",
+    "payoutOnWin":"可赢金额",
+    "odds":"赔率",
+    "winChance":"胜率",
+    "betAmount":"投注金额",
+    "pleaseBet":"请下注",
+    "waitingBet":"请等待下注信息链上确认",
+    "waitingNumber":"请等待开奖结果"
+  },
+
+  "rank":{
+    "rank":"下注排行榜",
+    "player":"玩家",
+    "totalPlayed":"总下注额",
+    "prize":"奖励",
+    "dateRefreshInterval":"该列表每5分钟刷新一次",
+    "lastBattle":"昨日排行榜"
+  },
+
+  "historyTable":{
+    "allBets":"所有投注",
+    "highRollers":"大额投注",
+    "rareWins":"险胜局",
+    "myBets":"我的投注",
+    "player":"玩家",
+    "prediction":"预测",
+    "bets":"投注",
+    "luckyNumber":"幸运数字",
+    "payout":"支付"
+  },
+
+  "claim":{
+    "claim":"声明",
+    "claim1":"任何个人(“用户”)理解并接受加密资产不一定有任何政府机构的特定形式的保护或监管。这些加密资产的价值具有高度的波动性和投机性，有全部损失的可能性.",
+    "claim2":"进一步声明并保证您:",
+    "claim3":"a. 根据你的司法管辖区，你是否年满18岁或其他法定年龄;",
+    "claim4":"b. 确保您在维基天堂智能合约使用的的加密货币资产不受阻碍、不存在争用或没收，也不存在任何第三方对您加密货币资产的权利;",
+    "claim5":"c. 如果您所在国家的任何适用法律禁止或将有可能禁止您使用我们的服务，您将不使用我们的服务或将立即停止使用我们的服务;"
+  },
+
+  "wallet":{
+	"walletAddress":"钱包地址",
+	"walletBalance":"钱包余额"
+  },
+
+  "GemRush":{
+	"gemRush":"宝石争霸",
+	"gemFlow":"宝石流水",
+	"investmentRecord":"投资记录"
+  }
+
+}
