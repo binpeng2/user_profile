@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './HomePage.css';
 import WalletCheck from './WalletCheck'
 import GemComp from "./GemTable/GemComp";
+import RollComp from "./RollTable/RollComp";
 // import RollComp from "./RollTable/RollComp";
 
 let languageFile = null;
@@ -33,7 +34,7 @@ class HomePage extends Component{
               <h1>{languageFile.notification.comingSoon}</h1>*/}
             </div>
 		<WalletCheck languageFile={languageFile}/>
-		{/* <RollTable languageFile={languageFile}/> */}
+		<RollComp languageFile={languageFile}/>
         </div>
 
 

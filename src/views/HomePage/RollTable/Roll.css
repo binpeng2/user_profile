@@ -1,0 +1,23 @@
+.TabsHighlighted{
+  color: black !important;
+  background-color: white;
+  font-size: 1.1rem;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.Tabs{
+  color: black !important;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.TabsDiv{
+  line-height:1;
+  text-align: left;
+}
+
+.Note{
+  float: right;
+  vertical-align: bottom;
+  font-size: 1.2rem;
+}

@@ -3,7 +3,7 @@
   "notification":{
     "comingSoon":"Coming Soon",
     "waykiMaxLogin":"Please login to your WaykiMax!",
-    "changeNetwork":"Please login to WaykiMax Mainnet闁挎冻鎷�",
+    "changeNetwork":"Please login to WaykiMax Mainnet闂備焦瀵ч崘濠氬箯閿燂拷",
     "systemUpgrading":"System Upgrading",
     "waykiMaxRequired":"Please install the WaykiMax extention then login in the wallet.",
     "confirmationDeclined":"User declined waykiscan signature",
@@ -68,7 +68,7 @@
 
   "claim":{
     "claim":"Claim",
-    "claim1":"Any individual閼憋拷(the 'user') understands and accepts that crypto assets do not necessarily have a specific form of protection or regulation by any governmental body. The value of these crypto assets is highly volatile and speculative, extending the possibility of total loss.",
+    "claim1":"Any individual闂佸吋鍞婚幏锟�(the 'user') understands and accepts that crypto assets do not necessarily have a specific form of protection or regulation by any governmental body. The value of these crypto assets is highly volatile and speculative, extending the possibility of total loss.",
     "claim2":"You further represent and warrant that you:",
     "claim3":"a. are at least 18 years old or of other legal age, according to your relevant jurisdiction;",
     "claim4":"b. guarantee that your crypto assets, which you transfer to the wayki paradise smart contract are not encumbered, not in contention, or under seizure, and that neither exist any rights of third parties to your crypto assets;",
@@ -83,7 +83,13 @@
   "GemRush":{
 	"gemRush":"Gem Rush",
 	"gemFlow":"Gem flow",
-	"investmentRecord":"Investment record"
+	"investmentRecord":"Investment record",
+	"gemRushRecord":"Gem Rush Record"
+  },
+
+  "Roll":{
+	"betRecord":"Bet Record",
+	"roll":"Roll"
   }
 
   
