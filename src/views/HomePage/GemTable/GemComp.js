@@ -3,6 +3,7 @@ import './Gem.css';
 import GemTable from './GemTable.js';
 import { Divider } from 'antd';
 import { relative } from 'path';
+import axios from 'axios';
 const ColoredLine = ({ color }) => (
     <hr
         style={{
@@ -21,14 +22,26 @@ class GemComp extends Component {
       tabs:"GemRecord"
     }
   }
+
+  componentDidMount = () =>{
+    this.fetchDepositHistory();
+  }
+
+  fetchDepositHistory = () =>{
+    axios.get('https://backend.crazydogs.live:4001/api/luckynumber/globalBetsHistory')
+    .then(res =>{
+      console.log(res.data.data)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+  }
   
 
   render(){
     return(
 
         <div align="middle">
-
-
           <div>
             <div className="TabsDiv">
               <span className={this.state.tabs === "GemRecord" ? "TabsHighlighted" : "Tabs"} onClick={()=>{this.setState({tabs:"GemRecord"})}}>{this.props.languageFile.GemRush.gemFlow}</span>

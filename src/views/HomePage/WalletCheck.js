@@ -6,6 +6,7 @@ import './WalletCheck.css';
 import GemComp from "./GemTable/GemComp";
 import RollComp from "./RollTable/RollComp";
 
+
 const { TabPane } = Tabs;
 
 class WalletCheck extends Component{

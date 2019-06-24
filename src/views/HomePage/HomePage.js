@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './HomePage.css';
 import WalletCheck from './WalletCheck'
 import GemComp from "./GemTable/GemComp";
+import Wallet from './Wallet.js';
 // import RollComp from "./RollTable/RollComp";
 
 let languageFile = null;
@@ -29,6 +30,7 @@ class HomePage extends Component{
     return(
         <div className="homePage" >
             <div className="BackgroundSlogen">
+            <Wallet languageFile={languageFile}/>
               {/*<h1>{languageFile.homePage.waykiParadise}</h1>
               <h1>{languageFile.notification.comingSoon}</h1>*/}
             </div>

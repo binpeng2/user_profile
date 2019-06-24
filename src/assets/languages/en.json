@@ -77,7 +77,8 @@
 
   "wallet":{
 	"walletAddress":"Wallet Address",
-	"walletBalance":"Wallet Balance"
+  "walletBalance":"Wallet Balance",
+  "query":"Query"
   },
 
   "GemRush":{

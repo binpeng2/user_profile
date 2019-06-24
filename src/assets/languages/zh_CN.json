@@ -85,7 +85,8 @@
 
   "wallet":{
 	"walletAddress":"钱包地址",
-	"walletBalance":"钱包余额"
+  "walletBalance":"钱包余额",
+  "query":"查询"
   },
 
   "GemRush":{
