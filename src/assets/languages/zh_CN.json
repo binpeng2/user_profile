@@ -92,7 +92,13 @@
   "GemRush":{
 	"gemRush":"宝石争霸",
 	"gemFlow":"宝石流水",
-	"investmentRecord":"投资记录"
+	"investmentRecord":"投资记录",
+	"gemRushRecord":"宝石流水记录"
+  },
+
+  "Roll":{
+	"betRecord":"投注记录",
+	"roll":"疯狂过山车"
   }
 
 }
