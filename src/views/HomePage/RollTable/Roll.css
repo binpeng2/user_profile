@@ -3,25 +3,28 @@
   background-color: white;
   font-size: 1.1rem;
   border-radius: 5px 5px 0px 0px;
+  padding: 0.4em 0.4em 0.3em 0.4em;
 }
 
 .Tabs{
   color: black !important;
   background-color: white;
   border-radius: 5px 5px 0px 0px;
+  padding: 0.3em 0.4em 0.3em 0.4em;
 }
 
 .TabsDiv{
   line-height:1;
   text-align: left;
+  padding-bottom: 0.3em;
 }
 
-.rNote{
+.Note{
   float: right;
   vertical-align: bottom;
   font-size: 1.2rem;
   position: relative;
-  bottom: 1.1rem;
+  bottom: 1rem;
 }
 
 div.title{

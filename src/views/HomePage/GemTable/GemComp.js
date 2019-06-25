@@ -66,7 +66,7 @@ class GemComp extends Component {
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullWithdrawHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
     .then(res =>{
-	// console.log('full withdraw',res);
+	console.log('full withdraw',res);
 	this.setState({InvestRecord: res.data.data});
 	// let sum = 0;
   // var i = 0;

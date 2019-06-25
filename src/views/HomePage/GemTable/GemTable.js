@@ -68,7 +68,8 @@ class GemTable extends Component {
     		  } }
   		  />)
 	  } else {
-		title = <div><p style={{color:"white"}}>{this.props.languageFile.GemRush.totalInvest}:&nbsp;{this.props.totalInvest} &nbsp; WICC {this.props.languageFile.GemRush.totalWithdraw}:&nbsp;{this.props.totalWithdraw}&nbsp;WPT</p>
+		title = <div><p className="title-text" style={{color:"white", float: "left"}}>{this.props.languageFile.GemRush.totalInvest}:&nbsp;{this.props.totalInvest} &nbsp; WICC</p>
+					 <p className="title-text" style={{color:"white", float: "right"}}>{this.props.languageFile.GemRush.totalWithdraw}:&nbsp;{this.props.totalWithdraw}&nbsp;WPT</p>
 				</div>
 		table = (<List
 			size="small"
@@ -81,17 +82,22 @@ class GemTable extends Component {
 				pageSize: 10,
 			}}
      	    dataSource={this.props.record}
-    	    renderItem={(item,index) =>{
+    	    renderItem={(item) =>{
       	    return (
            	 <div>
+			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } >
               <Row style={{marginBottom:'0',textAlign:'center'}}>
-                <Col xs={12} >
+                <Col xs={5} >
                   <p style={{color: "white"}}> {this.timeConverter(item.timestamp)}</p>
                 </Col>
-                <Col xs={12} >
+                <Col xs={6} >
                   <p style={{color: "white"}}> {this.props.languageFile.GemRush.withdraw}&nbsp;{item.amount}&nbsp;WPT</p>
                 </Col>
+				<Col xs={13} >
+                  <p style={{color: "white"}}> {item.transferHash} </p>
+                </Col>
               </Row>
+			  </a>
             </div>
           )
     		  } }
@@ -108,7 +114,12 @@ class GemTable extends Component {
         <div className="title"> 
 		{title}
 		</div>
-        {table}
+		<div className="b">
+		
+		</div>
+		<div>
+		{table}
+		</div>
       </div>
     )
   }
