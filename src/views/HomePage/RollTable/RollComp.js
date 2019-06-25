@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Roll.css';
+import '../GemTable/Gem.css';
 import { Divider, Row, Col, List } from 'antd';
 import { relative } from 'path';
 import {GetRequest} from "../../../component/APIRequest/APIRequest";
@@ -45,7 +45,7 @@ class RollComp extends Component {
 	if (this.state.BetRecord && this.props.walletAddr) {
 		table = <List
 			size="small"
-      pagination={this.state.BetRecord.length > 10 ? {
+			pagination={this.state.BetRecord.length > 10 ? {
 				simple: 1,
 				onChange: page => {
 					console.log(page);
@@ -58,19 +58,19 @@ class RollComp extends Component {
            	 <div>
               <Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
-                  <p style={{color: "white"}}> {item.timestamp.slice(0,4)+" "+item.timestamp.slice(5,7)+item.timestamp.slice(8,10)+" "+item.timestamp.slice(11,16)}</p>
+                  <p className="general-content"> {item.timestamp.slice(0,4)+" "+item.timestamp.slice(5,7)+item.timestamp.slice(8,10)+" "+item.timestamp.slice(11,16)}</p>
                 </Col>
                 <Col xs={5} >
-                  <p style={{color: "white"}}> {item.isUnder}</p>
+                  <p className="general-content"> {item.isUnder}</p>
                 </Col>
 				<Col xs={4} >
-                  <p style={{color: "white"}}> {item.luckyNumber}</p>
+                  <p className="general-content"> {item.luckyNumber}</p>
                 </Col>
 				<Col xs={5} >
-                  <p style={{color: "white"}}> {item.betValue}</p>
+                  <p className="general-content"> {item.betValue}</p>
                 </Col>
 				<Col xs={5} >
-                  <p style={{color: "white"}}> {item.payout}</p>
+                  <p className="general-content"> {item.payout}</p>
                 </Col>
               </Row>
             </div>

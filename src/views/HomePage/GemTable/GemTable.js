@@ -42,8 +42,7 @@ class GemTable extends Component {
 		title = <p className="title-text">{this.props.languageFile.GemRush.gemRushRecord}</p>
 		table = (<List
 			  size="small"
-			 		
-			pagination={this.props.record.length > 10 ? {
+			  pagination={this.props.record.length > 10 ? {
 				simple: 1,
 				onChange: page => {
 					console.log(page);
@@ -56,13 +55,13 @@ class GemTable extends Component {
            	 <div>
               <Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={8} >
-                  <p style={{color: "white"}}> {this.timeConverter(item.timestamp)}</p>
+                  <p className="general-content"> {this.timeConverter(item.timestamp)}</p>
                 </Col>
                 <Col xs={8} >
-                  <p style={{color: "white"}}>{item.depositAmount>=10000 ? item.depositAmount*1.05:item.depositAmount}</p>
+                  <p className="general-content">{item.depositAmount>=10000 ? item.depositAmount*1.05:item.depositAmount}</p>
                 </Col>
                 <Col xs={8} >
-                  <p style={{color: "white"}}>{item.depositAmount}</p>
+                  <p className="general-content">{item.depositAmount}</p>
                 </Col>
               </Row>
             </div>
@@ -73,7 +72,12 @@ class GemTable extends Component {
 		title = <div><p className="title-text" style={{color:"white", float: "left"}}>{this.props.languageFile.GemRush.totalInvest}:&nbsp;{this.props.totalInvest} &nbsp; WICC</p>
 					 <p className="title-text" style={{color:"white", float: "right"}}>{this.props.languageFile.GemRush.totalWithdraw}:&nbsp;{this.props.totalWithdraw}&nbsp;WPT</p>
 				</div>
-		table = (<List
+		table = (
+		<div>
+			<div className="b">
+		
+		</div>
+		<List
 			size="small"
 		
 			pagination={this.props.record.length > 10 ? {
@@ -90,20 +94,21 @@ class GemTable extends Component {
 			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">
               <Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
-                  <p style={{color: "white"}}> {this.timeConverter(item.timestamp)}</p>
+                  <p className="gem-content"> {this.timeConverter(item.timestamp)}</p>
                 </Col>
                 <Col xs={6} >
-                  <p style={{color: "white"}}> {this.props.languageFile.GemRush.withdraw}&nbsp;{item.amount}&nbsp;WPT</p>
+                  <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{item.amount}&nbsp;WPT</p>
                 </Col>
 				<Col xs={13} >
-                  <p style={{color: "white"}}> {item.transferHash} </p>
+                  <p className="gem-content"> {item.transferHash} </p>
                 </Col>
               </Row>
 			  </a>
             </div>
           )
     		  } }
-  		  />)
+  		  />
+		</div>)
 	  }
   }
   else{
