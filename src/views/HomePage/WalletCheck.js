@@ -14,7 +14,8 @@ class WalletCheck extends Component{
   render(){
     return(
         <div className="WalletCheck">
-		    <GemComp languageFile={this.props.languageFile}/>
+          
+		    <GemComp languageFile={this.props.languageFile} walletAddr  ={this.props.walletAddr} />
         </div>
     )
   }
