@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import './Roll.css';
-import { Divider, Row, Col } from 'antd';
+import { Divider, Row, Col, List } from 'antd';
 import { relative } from 'path';
+import {GetRequest} from "../../../component/APIRequest/APIRequest";
+import axios from 'axios';
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -16,19 +18,71 @@ const ColoredLine = ({ color }) => (
 class RollComp extends Component {
   constructor(props){
 	super(props);
-	
-    this.state={
-      tabs:"GemRecord"
-    }
+
+	this.state = {
+		BetRecord: null,
+	}
   }
-  
-  
+
+  componentDidMount = () =>{
+    this.fetchDepositHistory();
+  }
+
+  fetchDepositHistory = () =>{
+	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myBetsHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+    .then(res =>{
+		console.log(res);
+		this.setState({BetRecord:res.data.data});
+		console.log(this.state.BetRecord);
+    })
+    .catch(err =>{
+      console.log(err)
+	})
+  }   
 
   render(){
+	let table = null;
+	if (this.state.BetRecord) {
+		table = <List
+			size="small"
+			pagination={{
+				simple: 1,
+				onChange: page => {
+					console.log(page);
+				},
+				pageSize: 10,
+			}}
+     	    dataSource={this.state.BetRecord}
+    	    renderItem={(item) =>{
+      	    return (
+           	 <div>
+              <Row style={{marginBottom:'0',textAlign:'center'}}>
+                <Col xs={5} >
+                  <p style={{color: "white"}}> {item.timestamp.slice(0,4)+" "+item.timestamp.slice(5,7)+item.timestamp.slice(8,10)+" "+item.timestamp.slice(11,16)}</p>
+                </Col>
+                <Col xs={5} >
+                  <p style={{color: "white"}}> {item.isUnder}</p>
+                </Col>
+				<Col xs={4} >
+                  <p style={{color: "white"}}> {item.luckyNumber}</p>
+                </Col>
+				<Col xs={5} >
+                  <p style={{color: "white"}}> {item.betValue}</p>
+                </Col>
+				<Col xs={5} >
+                  <p style={{color: "white"}}> {item.payout}</p>
+                </Col>
+              </Row>
+            </div>
+         	)
+    		  } }
+  			  />
+	} else {
+		table = <div></div>
+	}
     return(
-
         <div align="middle">
-
+			{this.fetchDepositHistory()}
 
           <div>
             <div className="TabsDiv">
@@ -56,7 +110,7 @@ class RollComp extends Component {
                 </Col>
             </Row>
 			<div>
-            TABLE CONTENT
+		    {table}
             </div>
           </div>
 		
