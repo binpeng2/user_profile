@@ -1,11 +1,11 @@
-.playButton{
+span.playButton{
     user-select: none;
+    font-size:20px;
     display: inline-block;
     text-align: center;
-    /* padding: 4% 1%; */
-    margin-left:5%;
-    width: 80%;
-    height:100%;
+    margin-left:2%;
+    width:4%;
+    height:120%;
     border-radius: 8px;
     background-image:linear-gradient(100deg,#D74C81, #AE84A0,  #93A8B4,#6DDCD2);
   }
@@ -21,9 +21,11 @@
 }
 .wicc{
     margin-left:5%;
+    text-align: left;
 }
 .wpt{
-    margin-left:15.5%;
+    margin-left:5%;
+    text-align: left;
 }
 
 @media screen and (max-width: 512px){
@@ -31,16 +33,23 @@
         font-size: 0.8rem;
         margin-left:5%;
     }
- }
- @media screen and (max-width: 512px){
-    .playButton{
-        user-select: none;
-        display: inline-block;
-        text-align: center;
+    .balance{
+        font-size: 0.8rem;
+        color:white;
+    }
+    span.playButton{
+        font-size:0.6em;
+        width:8%;
         margin-left:5%;
-        width:10%;
-        height:10%;
-    
-      }
+
+    }
+
+    .wallet-input{
+        margin-left: -100%;
+        /* width:10%; */
+    }
+
+
  }
+
 

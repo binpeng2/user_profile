@@ -21,18 +21,14 @@ class RollComp extends Component {
 
 	this.state = {
 		BetRecord: null,
-	}
+	  }
   }
 
-  componentDidUpdate = (prevprops) =>{
-    if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
-      this.fetchDepositHistory();
-    }
-    
+  componentDidMount = () =>{
+    this.fetchDepositHistory();
   }
 
   fetchDepositHistory = () =>{
-	   if  (this.props.walletAddr != '') {
 	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myBetsHistory?addr='+this.props.walletAddr)
     .then(res =>{
 		// console.log(res);
@@ -42,7 +38,6 @@ class RollComp extends Component {
     .catch(err =>{
       console.log(err)
 	})
-	 }
   }   
 
   render(){
@@ -50,7 +45,7 @@ class RollComp extends Component {
 	if (this.state.BetRecord && this.props.walletAddr) {
 		table = <List
 			size="small"
-			pagination={this.props.record.length > 10 ? {
+      pagination={this.state.BetRecord.length > 10 ? {
 				simple: 1,
 				onChange: page => {
 					console.log(page);

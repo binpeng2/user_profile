@@ -17,16 +17,11 @@ div.blank{
 .BackgroundSlogen{
   font-size:20px;
   text-align: left;
-  padding: 100px 0;
+  padding: 10% ;
 }
 
 
-.BackgroundSlogen h1{
-  color: white;
-  font-weight: 700;
-  font-size: 60px;
-  margin-bottom: 0;
-}
+
 
 .GameSection{
   margin-top: 20px;
@@ -72,9 +67,6 @@ div.blank{
     padding: 180px 15px 20px 50px;
   }
 
-  .BackgroundSlogen{
-    padding: 50px;
-  }
 
   .BackgroundSlogen h1{
     font-weight: 700;
