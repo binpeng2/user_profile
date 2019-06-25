@@ -87,7 +87,7 @@ class RollComp extends Component {
           <div>
             <div className="TabsDiv">
               <span className="Tabs">{this.props.languageFile.Roll.betRecord}</span>
-			  <span className="Note">{this.props.languageFile.Roll.roll}</span>
+			  <span className="rNote">{this.props.languageFile.Roll.roll}</span>
 			</div>
 			<div style={{position: relative, top:0, marginTop:0}}>
 			<ColoredLine color="white" />     

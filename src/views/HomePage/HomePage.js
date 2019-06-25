@@ -39,6 +39,9 @@ class HomePage extends Component{
               <h1>{languageFile.notification.comingSoon}</h1>*/}
             </div>
 		<WalletCheck languageFile={languageFile}/>
+		<div className="blank">
+		
+		</div>
 		<RollComp languageFile={languageFile}/>
         </div>
 
