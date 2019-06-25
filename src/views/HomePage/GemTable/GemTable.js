@@ -33,10 +33,11 @@ class GemTable extends Component {
   }
 
 
+
   render(){
 	let table = null;
 	let title = null;
-    if(this.props.record){
+    if(this.props.record && this.props.walletAddr != ''){
 	  if (this.props.tabs==="Gem") {
 		title = <p className="title-text">{this.props.languageFile.GemRush.gemRushRecord}</p>
 		table = (<List

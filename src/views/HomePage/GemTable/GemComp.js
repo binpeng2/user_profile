@@ -116,7 +116,7 @@ class GemComp extends Component {
 			<div>
 			{console.log(this.state.totalWithdraw)}
 			{console.log(this.state.totalInvest)}
-            <GemTable totalInvest={this.state.totalInvest} totalWithdraw={this.state.totalWithdraw} languageFile={this.props.languageFile} tabs={this.state.tabs} record={this.state[this.state.tabs+"Record"]}/>
+            <GemTable walletAddr={this.props.walletAddr} totalInvest={this.state.totalInvest} totalWithdraw={this.state.totalWithdraw} languageFile={this.props.languageFile} tabs={this.state.tabs} record={this.state[this.state.tabs+"Record"]}/>
             </div>
           </div>
 		

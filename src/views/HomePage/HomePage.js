@@ -46,11 +46,11 @@ class HomePage extends Component{
             <Wallet languageFile={languageFile} onSubmit= {this.handleInputValue.bind(this)} />
             </div>
 
-		<WalletCheck languageFile={languageFile}/>
+		<WalletCheck walletAddr={this.state.walletAddr} languageFile={languageFile}/>
 		<div className="blank">
 		
 		</div>
-		<RollComp languageFile={languageFile}/>
+		<RollComp walletAddr={this.state.walletAddr} languageFile={languageFile}/>
 
         </div>
 
