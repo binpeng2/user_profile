@@ -50,7 +50,7 @@ class GemTable extends Component {
                   <p style={{color: "white"}}> {this.timeConverter(item.timestamp)}</p>
                 </Col>
                 <Col xs={8} >
-                  <p style={{color: "white"}}>{item.isUnder}</p>
+                  <p style={{color: "white"}}>{item.depositAmount>=10000 ? item.depositAmount*1.05:item.depositAmount}</p>
                 </Col>
                 <Col xs={8} >
                   <p style={{color: "white"}}>{item.depositAmount}</p>
