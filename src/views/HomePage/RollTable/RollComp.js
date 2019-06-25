@@ -25,10 +25,13 @@ class RollComp extends Component {
   }
 
   componentDidMount = () =>{
-    this.fetchDepositHistory();
+	    if  (this.props.walletAddr != '') {
+	this.fetchDepositHistory();
+	  }
   }
 
   fetchDepositHistory = () =>{
+	   if  (this.props.walletAddr != '') {
 	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myBetsHistory?addr='+this.props.walletAddr)
     .then(res =>{
 		// console.log(res);
@@ -38,6 +41,7 @@ class RollComp extends Component {
     .catch(err =>{
       console.log(err)
 	})
+	 }
   }   
 
   render(){

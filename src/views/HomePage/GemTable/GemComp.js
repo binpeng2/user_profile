@@ -33,8 +33,10 @@ class GemComp extends Component {
     }
   }
 
-  componentDidMount = () =>{
-    this.fetchDepositHistory("GemRecord");
+  componentDidUpdate = () => {
+  if  (this.props.walletAddr != '') {
+	this.fetchDepositHistory("GemRecord");
+  }
   }
 
   sum = (data) =>{
@@ -66,7 +68,7 @@ class GemComp extends Component {
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullWithdrawHistory?addr='+this.props.walletAddr)
     .then(res =>{
-	console.log('full withdraw',res);
+	// console.log('full withdraw',res);
 	this.setState({InvestRecord: res.data.data});
 	// let sum = 0;
   // var i = 0;
@@ -83,7 +85,7 @@ class GemComp extends Component {
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myTotalWithdraw?addr='+this.props.walletAddr)
 	.then(res =>{
-	console.log(res);
+	// console.log(res);
 	this.setState({totalWithdraw: Math.round(res.data.data)});
     })
     .catch(err =>{
@@ -95,7 +97,9 @@ class GemComp extends Component {
     this.setState({
       record:this.state[listName]
     },()=>{
-      this.fetchDepositHistory(listName);
+	  if (this.props.walletAddr != '') {
+	  this.fetchDepositHistory(listName);
+	  }
     })
   }
 
@@ -114,8 +118,6 @@ class GemComp extends Component {
 			<ColoredLine color="white" />     
 			</div>
 			<div>
-			{console.log(this.state.totalWithdraw)}
-			{console.log(this.state.totalInvest)}
             <GemTable walletAddr={this.props.walletAddr} totalInvest={this.state.totalInvest} totalWithdraw={this.state.totalWithdraw} languageFile={this.props.languageFile} tabs={this.state.tabs} record={this.state[this.state.tabs+"Record"]}/>
             </div>
           </div>
