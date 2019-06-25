@@ -28,8 +28,7 @@
 }
 
 div.title{
-  height: 3%;
-
+  height: 8%;
 }
 
 p.title-text{
@@ -37,9 +36,25 @@ p.title-text{
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 512px){/* ��������С�� 512px, ���ø�Сfont-size���� */
-   p.title-text{
-  color: white;
-  font-size: 0.9rem;
+p.gem-content{
+	color: white;
+	text-align: left;
+	font-size: 1em;
 }
+
+p.general-content{
+	color: white;
+	text-align: center;
+	font-size: 1em;
+}
+
+div.b{
+	height:50px;
+}
+
+
+@media (max-width:800px){
+  div.b{
+	height:25px;
+  }
 }
