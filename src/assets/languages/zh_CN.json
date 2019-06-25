@@ -93,12 +93,19 @@
 	"gemRush":"宝石争霸",
 	"gemFlow":"宝石流水",
 	"investmentRecord":"投资记录",
-	"gemRushRecord":"宝石流水记录"
+	"gemRushRecord":"宝石流水记录",
+	"withdraw": "提现",
+	"totalWithdraw": "累计提现WPT"
   },
 
   "Roll":{
 	"betRecord":"投注记录",
-	"roll":"疯狂过山车"
+	"roll":"疯狂过山车",
+	"betTime":"投注时间",
+	"myPredict": "我的预测",
+	"luckyNum": "幸运数字",
+	"betAmount": "投注金额",
+	"rewardAmount": "奖金数额"
   }
 
 }

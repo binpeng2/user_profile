@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Roll.css';
-import { Divider } from 'antd';
+import { Divider, Row, Col } from 'antd';
 import { relative } from 'path';
 
 const ColoredLine = ({ color }) => (
@@ -38,6 +38,23 @@ class RollComp extends Component {
 			<div style={{position: relative, top:0, marginTop:0}}>
 			<ColoredLine color="white" />     
 			</div>
+			<Row style={{marginBottom:'0',textAlign:'center'}}>
+                <Col xs={5} >
+                  <p className="title-text">{this.props.languageFile.Roll.betTime}</p>
+                </Col>
+                <Col xs={5} >
+                  <p className="title-text">{this.props.languageFile.Roll.myPredict}</p>
+                </Col>
+                <Col xs={4} >
+                  <p className="title-text">{this.props.languageFile.Roll.luckyNum}</p>
+                </Col>
+				<Col xs={5} >
+                  <p className="title-text">{this.props.languageFile.Roll.betAmount}</p>
+                </Col>
+				<Col xs={5} >
+                  <p className="title-text">{this.props.languageFile.Roll.rewardAmount}</p>
+                </Col>
+            </Row>
 			<div>
             TABLE CONTENT
             </div>
