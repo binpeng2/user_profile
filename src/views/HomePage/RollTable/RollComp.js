@@ -42,7 +42,7 @@ class RollComp extends Component {
 
   render(){
 	let table = null;
-	if (this.state.BetRecord) {
+	if (this.state.BetRecord && this.props.walletAddr) {
 		table = <List
 			size="small"
 			pagination={{
