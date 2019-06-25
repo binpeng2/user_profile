@@ -50,8 +50,15 @@ class GemComp extends Component {
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
     .then(res =>{
-		console.log(res);
+		console.log('full despoit',res);
       this.setState({GemRecord:res.data.data});
+      let sum = 0;
+      for (let i=0;i<res.data.data.length; i++) {
+        sum += parseFloat(res.data.data[i].depositAmount);
+      }
+    
+      this.setState({totalInvest: sum});
+      
     })
     .catch(err =>{
       console.log(err)
@@ -59,14 +66,16 @@ class GemComp extends Component {
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullWithdrawHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
     .then(res =>{
-	console.log(res);
+	// console.log('full withdraw',res);
 	this.setState({InvestRecord: res.data.data});
-	var sum = 0;
-	var i = 0;
-	for (i=0;i<res.data.data.length; i++) {
-		sum += res.data.data[i].depositAmount;
-	}
-	this.setState({totalInvest: sum});
+	// let sum = 0;
+  // var i = 0;
+  
+	// for (i=0;i<res.data.data.length; i++) {
+	// 	sum += parseFloat(res.data.data[i].depositAmount);
+  // }
+
+	// this.setState({totalInvest: sum});
     })
     .catch(err =>{
       console.log(err)

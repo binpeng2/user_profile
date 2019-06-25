@@ -61,7 +61,7 @@ class GemTable extends Component {
     		  } }
   		  />)
 	  } else {
-		title = <div><p style={{color:"white"}}>{this.props.totalInvest} {this.props.languageFile.GemRush.totalWithdraw}:&nbsp;{this.props.totalWithdraw}&nbsp;WPT</p>
+		title = <div><p style={{color:"white"}}>{this.props.languageFile.GemRush.totalInvest}:&nbsp;{this.props.totalInvest} &nbsp; WICC {this.props.languageFile.GemRush.totalWithdraw}:&nbsp;{this.props.totalWithdraw}&nbsp;WPT</p>
 				</div>
 		table = (<List
 			size="small"

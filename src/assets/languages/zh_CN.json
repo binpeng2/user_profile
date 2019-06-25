@@ -94,7 +94,8 @@
 	"gemFlow":"宝石流水",
 	"investmentRecord":"投资记录",
 	"gemRushRecord":"宝石流水记录",
-	"withdraw": "提现",
+  "withdraw": "提现",
+  "totalInvest":"总投资",
 	"totalWithdraw": "累计提现WPT"
   },
 
