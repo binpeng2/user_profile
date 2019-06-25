@@ -33,8 +33,11 @@ class GemComp extends Component {
     }
   }
 
-  componentDidMount = () =>{
-    this.fetchDepositHistory("GemRecord");
+  componentDidUpdate = (prevprops) =>{
+    if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
+      this.fetchDepositHistory();
+    }
+    
   }
 
   sum = (data) =>{
@@ -46,7 +49,7 @@ class GemComp extends Component {
 	  return sum;
   }
 
-  fetchDepositHistory = (listName) =>{
+  fetchDepositHistory = () =>{
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr='+this.props.walletAddr)
     .then(res =>{

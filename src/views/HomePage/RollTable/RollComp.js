@@ -86,7 +86,7 @@ class RollComp extends Component {
 
           <div>
             <div className="TabsDiv">
-            <span className="Tabs">{this.props.languageFile.Roll.betRecord} {this.props.walletAddr}</span>
+            <span className="Tabs">{this.props.languageFile.Roll.betRecord} </span>
 			  <span className="Note">{this.props.languageFile.Roll.roll}</span>
 
 			</div>

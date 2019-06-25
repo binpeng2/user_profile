@@ -75,13 +75,13 @@ class GemTable extends Component {
 		table = (<List
 			size="small"
 		
-			pagination={{
+			pagination={this.props.record.length > 10 ? {
 				simple: 1,
 				onChange: page => {
 					console.log(page);
 				},
 				pageSize: 10,
-			}}
+			} : null}
      	    dataSource={this.props.record}
     	    renderItem={(item) =>{
       	    return (
