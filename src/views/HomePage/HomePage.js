@@ -50,7 +50,6 @@ class HomePage extends Component{
 		<RollComp languageFile={languageFile} />
         </div>
 
-
     )
   }
 }

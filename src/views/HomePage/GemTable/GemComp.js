@@ -27,7 +27,9 @@ class GemComp extends Component {
 	  tabs:"Gem",
 	  record: null,
 	  GemRecord:null,
-      InvestRecord:null,
+	  InvestRecord:null,
+	  totalWithdraw: 0,
+	  totalInvest: 0,
     }
   }
 
@@ -35,17 +37,50 @@ class GemComp extends Component {
     this.fetchDepositHistory("GemRecord");
   }
 
+  sum = (data) =>{
+	  var sum = 0;
+	  var i = 0;
+	  for (i=0;i<data.length; i++) {
+		sum += data[i].depositAmount;
+	  }
+	  return sum;
+  }
+
   fetchDepositHistory = (listName) =>{
-	if (listName === "GemRecord") {
-    axios.get('https://backend.crazydogs.live:4001/api/luckynumber/globalBetsHistory')
+
+	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
     .then(res =>{
-      this.setState({GemRecord:res.data.data})
+		console.log(res);
+      this.setState({GemRecord:res.data.data});
     })
     .catch(err =>{
       console.log(err)
 	})
-}
-  }
+
+	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullWithdrawHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+    .then(res =>{
+	console.log(res);
+	this.setState({InvestRecord: res.data.data});
+	var sum = 0;
+	var i = 0;
+	for (i=0;i<res.data.data.length; i++) {
+		sum += res.data.data[i].depositAmount;
+	}
+	this.setState({totalInvest: sum});
+    })
+    .catch(err =>{
+      console.log(err)
+	})
+
+	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myTotalWithdraw?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+	.then(res =>{
+	console.log(res);
+	this.setState({totalWithdraw: Math.round(res.data.data)});
+    })
+    .catch(err =>{
+     console.log(err)
+	})
+} 
 
   changeHistoryList = (listName) =>{
     this.setState({
@@ -70,7 +105,9 @@ class GemComp extends Component {
 			<ColoredLine color="white" />     
 			</div>
 			<div>
-            <GemTable languageFile={this.props.languageFile} tabs={this.state.tabs} record={this.state[this.state.tabs+"Record"]}/>
+			{console.log(this.state.totalWithdraw)}
+			{console.log(this.state.totalInvest)}
+            <GemTable totalInvest={this.state.totalInvest} totalWithdraw={this.state.totalWithdraw} languageFile={this.props.languageFile} tabs={this.state.tabs} record={this.state[this.state.tabs+"Record"]}/>
             </div>
           </div>
 		

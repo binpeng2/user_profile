@@ -85,12 +85,19 @@
 	"gemRush":"Gem Rush",
 	"gemFlow":"Gem flow",
 	"investmentRecord":"Investment record",
-	"gemRushRecord":"Gem Rush Record"
+	"gemRushRecord":"Gem Rush Record",
+	"withdraw": "Withdraw",
+	"totalWithdraw": "Cumulative WPT withdrawal"
   },
 
   "Roll":{
 	"betRecord":"Bet Record",
-	"roll":"Roll"
+	"roll":"Roll",
+	"betTime":"Bet Time",
+	"myPredict": "My Prediction",
+	"luckyNum": "Lucky Number",
+	"betAmount": "Bet Amount",
+	"rewardAmount": "Reward Amount"
   }
 
   
