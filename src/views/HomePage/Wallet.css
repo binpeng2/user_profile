@@ -12,7 +12,35 @@
 .wallet-input{
     margin-left: -100%;
 }
+.address{
+    margin-left:5%;
+}
 .balance{
     margin-left: 20%;
     color:white;
 }
+.wicc{
+    margin-left:5%;
+}
+.wpt{
+    margin-left:15.5%;
+}
+
+@media screen and (max-width: 512px){
+    .address{
+        font-size: 0.8rem;
+        margin-left:5%;
+    }
+ }
+ @media screen and (max-width: 512px){
+    .playButton{
+        user-select: none;
+        display: inline-block;
+        text-align: center;
+        margin-left:5%;
+        width:10%;
+        height:10%;
+    
+      }
+ }
+

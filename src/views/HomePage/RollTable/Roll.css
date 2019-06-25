@@ -28,7 +28,8 @@
 }
 
 div.title{
-  height: 8%;
+  height: 3%;
+
 }
 
 p.title-text{
@@ -36,7 +37,7 @@ p.title-text{
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 512px){/* 可视区域小于 512px, 设置更小font-size属性 */
+@media screen and (max-width: 512px){/* 锟斤拷锟斤拷锟斤拷锟斤拷小锟斤拷 512px, 锟斤拷锟矫革拷小font-size锟斤拷锟斤拷 */
    p.title-text{
   color: white;
   font-size: 0.9rem;

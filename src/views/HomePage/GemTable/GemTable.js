@@ -85,7 +85,7 @@ class GemTable extends Component {
     	    renderItem={(item) =>{
       	    return (
            	 <div>
-			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } >
+			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">
               <Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
                   <p style={{color: "white"}}> {this.timeConverter(item.timestamp)}</p>
