@@ -24,10 +24,11 @@ class RollComp extends Component {
 	}
   }
 
-  componentDidMount = () =>{
-	    if  (this.props.walletAddr != '') {
-	this.fetchDepositHistory();
-	  }
+  componentDidUpdate = (prevprops) =>{
+    if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
+      this.fetchDepositHistory();
+    }
+    
   }
 
   fetchDepositHistory = () =>{
@@ -49,13 +50,13 @@ class RollComp extends Component {
 	if (this.state.BetRecord && this.props.walletAddr) {
 		table = <List
 			size="small"
-			pagination={{
+			pagination={this.props.record.length > 10 ? {
 				simple: 1,
 				onChange: page => {
 					console.log(page);
 				},
 				pageSize: 10,
-			}}
+			} : null}
      	    dataSource={this.state.BetRecord}
     	    renderItem={(item) =>{
       	    return (
@@ -90,7 +91,7 @@ class RollComp extends Component {
 
           <div>
             <div className="TabsDiv">
-            <span className="Tabs">{this.props.languageFile.Roll.betRecord} {this.props.walletAddr}</span>
+            <span className="Tabs">{this.props.languageFile.Roll.betRecord} </span>
 			  <span className="Note">{this.props.languageFile.Roll.roll}</span>
 
 			</div>

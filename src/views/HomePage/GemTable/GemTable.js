@@ -75,18 +75,18 @@ class GemTable extends Component {
 		table = (<List
 			size="small"
 		
-			pagination={{
+			pagination={this.props.record.length > 10 ? {
 				simple: 1,
 				onChange: page => {
 					console.log(page);
 				},
 				pageSize: 10,
-			}}
+			} : null}
      	    dataSource={this.props.record}
     	    renderItem={(item) =>{
       	    return (
            	 <div>
-			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } >
+			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">
               <Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
                   <p style={{color: "white"}}> {this.timeConverter(item.timestamp)}</p>
@@ -106,7 +106,9 @@ class GemTable extends Component {
 	  }
   }
   else{
-	title = <p></p>;
+	  if (this.props.tabs==="Gem") {
+		title = <p className="title-text">{this.props.languageFile.GemRush.gemRushRecord}</p>;
+	  }
     table = (<div></div>);
   }
 

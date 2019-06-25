@@ -136,15 +136,18 @@ class Wallet extends Component{
       {/* </Col>
       <Col span={15} > */}
       <div className = "wallet-input">
-      {this.props.languageFile.wallet.walletAddress}:
+      <span className="address">{this.props.languageFile.wallet.walletAddress}:</span>
         <Input 
         value={this.state.walletAddrInput} 
         onChange={this.handleInput.bind(this)}
-        style={{width:'10%', height:'12%', marginLeft:"3%",marginBottom:"5%"}} /> 
+        style={{width:'10%', height:'12%', marginLeft:"3%",marginBottom:"0%"}} /> 
         
         <span className = "playButton" style={{width:'5%', height:'30%'}} onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
       </div><br />
-      <div className = "balance">{this.props.languageFile.wallet.walletBalance}： {this.state.wiccBalance} WICC <br /> {this.state.wptBalance} WPT</div>
+      <div className = "balance">
+      <span>{this.props.languageFile.wallet.walletBalance}： </span> 
+      <span className="wicc">{this.state.wiccBalance} WICC </span><br /> 
+      <span className="wpt">{this.state.wptBalance} WPT</span></div>
         
         {/* </Col>
       </Row> */}

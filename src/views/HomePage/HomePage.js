@@ -29,7 +29,6 @@ class HomePage extends Component{
     })
     
   }
-
   componentDidUpdate(prevProps) {
     // Typical usage (don't forget to compare props):
     if (this.props.lang !== prevProps.lang) {
@@ -45,12 +44,10 @@ class HomePage extends Component{
             <div className="BackgroundSlogen">
             <Wallet languageFile={languageFile} onSubmit= {this.handleInputValue.bind(this)} />
             </div>
-
-		<WalletCheck walletAddr={this.state.walletAddr} languageFile={languageFile}/>
+            <WalletCheck walletAddr={this.state.walletAddr} languageFile={languageFile}/>
 		<div className="blank">
-		
 		</div>
-		<RollComp walletAddr={this.state.walletAddr} languageFile={languageFile}/>
+    <RollComp walletAddr={this.state.walletAddr} languageFile={languageFile}/>
 
         </div>
 
