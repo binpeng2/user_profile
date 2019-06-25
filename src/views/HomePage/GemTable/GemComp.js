@@ -48,7 +48,7 @@ class GemComp extends Component {
 
   fetchDepositHistory = (listName) =>{
 
-	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr='+this.props.walletAddr)
     .then(res =>{
 		console.log('full despoit',res);
       this.setState({GemRecord:res.data.data});
@@ -64,7 +64,7 @@ class GemComp extends Component {
       console.log(err)
 	})
 
-	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullWithdrawHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullWithdrawHistory?addr='+this.props.walletAddr)
     .then(res =>{
 	console.log('full withdraw',res);
 	this.setState({InvestRecord: res.data.data});
@@ -81,7 +81,7 @@ class GemComp extends Component {
       console.log(err)
 	})
 
-	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myTotalWithdraw?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myTotalWithdraw?addr='+this.props.walletAddr)
 	.then(res =>{
 	console.log(res);
 	this.setState({totalWithdraw: Math.round(res.data.data)});

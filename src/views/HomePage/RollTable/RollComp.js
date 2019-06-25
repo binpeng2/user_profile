@@ -29,7 +29,7 @@ class RollComp extends Component {
   }
 
   fetchDepositHistory = () =>{
-	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myBetsHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
+	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myBetsHistory?addr='+this.props.walletAddr)
     .then(res =>{
 		// console.log(res);
 		this.setState({BetRecord:res.data.data});
