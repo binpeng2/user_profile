@@ -40,7 +40,14 @@ class GemTable extends Component {
 	  if (this.props.tabs==="Gem") {
 		title = <p className="title-text">{this.props.languageFile.GemRush.gemRushRecord}</p>
 		table = (<List
-   		   size="small"
+			  size="small"
+			  pagination={{
+				simple: 1,
+				onChange: page => {
+					console.log(page);
+				},
+				pageSize: 10,
+			}}
      		 dataSource={this.props.record}
     		  renderItem={(item,index) =>{
       	    return (
@@ -71,7 +78,7 @@ class GemTable extends Component {
 				onChange: page => {
 					console.log(page);
 				},
-				pageSize: 3,
+				pageSize: 10,
 			}}
      	    dataSource={this.props.record}
     	    renderItem={(item,index) =>{

@@ -16,10 +16,12 @@
   text-align: left;
 }
 
-.Note{
+.rNote{
   float: right;
   vertical-align: bottom;
   font-size: 1.2rem;
+  position: relative;
+  bottom: 1.1rem;
 }
 
 div.title{
