@@ -31,57 +31,35 @@ span.playButton:active{
     margin-left:3%;
     text-align: left;
 }
-.钱包余额{
-    margin-left:5%;
-    text-align: left;
-}
 
-span.Wallet.Balance{
-    margin-left:5%;
-    text-align: left;
-}
-/* img.user-image{
-    display: block;
-    width:100%;
 
-} */
+
+
 
 
 
 @media screen and (max-width: 512px){
 
     span.address{
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         /* margin-left:-10%; */
     }
     .balance{
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         padding-bottom:10px;
         color:white;
         /* margin-left:-10%; */
     }
 
     span.playButton{
-        font-size:0.6em;
+        font-size:0.8em;
         width:20%;
         margin-left:5%;
 
     }
  
-    span.钱包余额{
- 
-        margin-left:32%;
-        text-align: left;
-    }
-    span.Wallet.Balance{
- 
-        margin-left:47%;
-        text-align: left;
-    }
-    span.wallet-balance{
-        margin-left: 5%;
-        color:white;
-    }
+
+
 
  }
 
