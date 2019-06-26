@@ -132,7 +132,7 @@ class Wallet extends Component{
       <div className="walletfetch" >
       {/* <Row type="flex" justify="start">
         <Col span={3} > */}
-      <img src={require('../../assets/images/user-white.png')} alt="user" width="10%" className="user-image" style={{float:"left"}}></img>
+      <img src={require('../../assets/images/user-white.png')} alt="user" width="8%" className="user-image" style={{float:"left",alignItems:'left'}}></img>
       {/* </Col>
       <Col span={15} > */}
       <div className = "wallet-input">
@@ -142,11 +142,11 @@ class Wallet extends Component{
         onChange={this.handleInput.bind(this)}
         style={{width:'10%', height:'12%', marginLeft:"3%",marginBottom:"0%"}} /> 
         
-        <span className = "playButton" style={{width:'5%', height:'30%'}} onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
+        <span className = "playButton" onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
       </div><br />
       <div className = "balance">
       <span>{this.props.languageFile.wallet.walletBalance}： </span> 
-      <span className="wicc">{this.state.wiccBalance} WICC </span><br /> 
+      <span className="wicc">{this.state.wiccBalance} WICC </span>
       <span className="wpt">{this.state.wptBalance} WPT</span></div>
         
         {/* </Col>
