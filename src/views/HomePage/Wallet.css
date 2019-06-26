@@ -40,9 +40,11 @@ span.Wallet.Balance{
     margin-left:5%;
     text-align: left;
 }
-.user-image{
+/* img.user-image{
+    display: block;
     width:100%;
-}
+
+} */
 
 
 
@@ -50,13 +52,13 @@ span.Wallet.Balance{
 
     span.address{
         font-size: 1.15rem;
-        margin-left:-10%;
+        /* margin-left:-10%; */
     }
     .balance{
         font-size: 1.15rem;
         padding-bottom:10px;
         color:white;
-        margin-left:-10%;
+        /* margin-left:-10%; */
     }
 
     span.playButton{
@@ -65,9 +67,7 @@ span.Wallet.Balance{
         margin-left:5%;
 
     }
-    span.wicc{
-        margin-right:50%;
-    }
+ 
     span.钱包余额{
  
         margin-left:32%;
@@ -82,9 +82,7 @@ span.Wallet.Balance{
         margin-left: 5%;
         color:white;
     }
-    .user-image{
-        width:0%;
-    }
+
  }
 
 

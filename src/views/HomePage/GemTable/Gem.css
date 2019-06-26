@@ -1,7 +1,7 @@
 .TabsHighlighted{
   color: black !important;
   background-color: white;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   border-radius: 5px 5px 0px 0px;
   padding: 0.4em 0.6em 0.35em 0.6em;
 }
@@ -10,7 +10,7 @@
   color: black !important;
   background-color: white;
   border-radius: 5px 5px 0px 0px;
-  padding: 0.4em 0.6em 0.4em 0.6em;
+  padding: 0.35em 0.55em 0.35em 0.55em;
   font-size: 1.2rem;
 }
 
@@ -54,9 +54,77 @@ div.b{
 	height:35px;
 }
 
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link{
+  background-color: transparent !important;
+  color: grey !important;
+  border: none !important;
+}
+.ant-pagination-item{
+  background-color: transparent !important;
+  border: none !important;
+
+}
+
+
+.ant-pagination-item a{
+  color: grey !important;
+}
+
+.ant-pagination-item-active a{
+  color: white !important;
+}
+
+.transactionHashLink{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 @media (max-width:800px){
   div.b{
 	height:17px;
   }
+
+  .TabsHighlighted{
+  color: black !important;
+  background-color: white;
+  font-size: 0.9rem;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0.3em 0.5em 0.25em 0.5em;
+}
+
+.Tabs{
+  color: black !important;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0.25em 0.45em 0.25em 0.45em;
+  font-size: 0.8rem;
+}
+
+
+.Note{
+  float: right;
+  vertical-align: bottom;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0.4rem;
+}
+
+
+p.title-text{
+  color: white;
+  font-size: 0.85rem;
+}
+
+p.gem-content{
+	color: white;
+	text-align: left;
+	font-size: 0.75em;
+}
+
+p.general-content{
+	color: white;
+	text-align: center;
+	font-size: 0.75em;
+}
 }

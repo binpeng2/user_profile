@@ -130,11 +130,11 @@ class Wallet extends Component{
   render(){
     return(
       <div className="walletfetch" >
-      <Row type="flex" justify="start">
-        <Col span={2} >
-      <img src={require('../../assets/images/user-white.png')} alt="user"  className="user-image" ></img>
+      <Row type="flex" justify="space-between" align="left">
+        <Col span={2}>
+      <img src={require('../../assets/images/user-white.png')} alt="user"  className="user-image" style={{width:'100%'}} ></img>
       </Col>
-      <Col span={20} offset={2}>
+      <Col span={20} >
       {/* <div className = "wallet-input"> */}
       <span className="address">{this.props.languageFile.wallet.walletAddress}:</span>
         <Input 
@@ -152,13 +152,7 @@ class Wallet extends Component{
         
       </Col>
       </Row>
-       {/* <Row type="flex" justify="start"> */}
-         {/* <Col span={5} >
-      // </Col> */}
-       {/* <Col span={8} offset={5} > */}
-      
-        {/* </Col>
-      // </Row> */}
+
       </div>
     )
   }
