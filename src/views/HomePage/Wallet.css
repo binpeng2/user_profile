@@ -31,6 +31,10 @@ span.playButton:active{
     margin-left:3%;
     text-align: left;
 }
+input.ant-input{
+    width:30%;
+    margin-left:5%
+}
 
 
 
@@ -41,11 +45,16 @@ span.playButton:active{
 @media screen and (max-width: 512px){
 
     span.address{
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-left:-13%;
     }
+    input.ant-input{
+        width:46%;
+        margin-left:5%
+    }
+
     .balance{
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding-bottom:10px;
         color:white;
         margin-left:-13%;

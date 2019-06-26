@@ -151,8 +151,7 @@ class Wallet extends Component{
         <Input
         value={this.state.walletAddrInput}
         onChange={this.handleInput.bind(this)}
-
-        style={{width:'30%',marginLeft:'5%'}}
+        // style={{width:'30%',marginLeft:'5%'}}
         /> 
         
         <span className = "playButton" onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
