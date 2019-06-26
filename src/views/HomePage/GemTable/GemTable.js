@@ -92,7 +92,7 @@ class GemTable extends Component {
                   <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{Math.round(item.amount * 100) / 100}&nbsp;WPT</p>
                 </Col>
 				          <Col xs={8} >
-                  <p className="gem-content transactionHashLink"> <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">{item.transferHash} </a></p>
+                  <p className="gem-content transactionHashLink" > <a style={{color:'white'}} href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">{item.transferHash} </a></p>
                 </Col>
               </Row>
 
@@ -105,7 +105,7 @@ class GemTable extends Component {
   }
   else{
 	  if (this.props.tabs==="Gem") {
-		title = <p className="title-text">{this.props.languageFile.GemRush.gemRushRecord}</p>;
+		title = <p className="title-text" >{this.props.languageFile.GemRush.gemRushRecord}</p>;
 	  }
     table = (<div></div>);
   }

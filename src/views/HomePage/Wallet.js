@@ -144,7 +144,7 @@ class Wallet extends Component{
         /> 
         
         <span className = "playButton" onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
-      {/* </div><br /> */}
+
       <div className = "balance">
       <span>{this.props.languageFile.wallet.walletBalance}： </span> 
       <span className="wicc">{this.state.wiccBalance} WICC </span><br />
