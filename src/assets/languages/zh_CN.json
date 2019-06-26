@@ -92,7 +92,7 @@
   "GemRush":{
 	"gemRush":"宝石争霸",
 	"gemFlow":"宝石流水",
-	"investmentRecord":"投资记录",
+	"investmentRecord":"提现记录",
 	"gemRushRecord":"宝石流水记录",
   "withdraw": "提现",
   "totalInvest":"总投资",
@@ -109,7 +109,9 @@
 	"myPredict": "我的预测",
 	"luckyNum": "幸运数字",
 	"betAmount": "投注金额",
-	"rewardAmount": "奖金数额"
+	"rewardAmount": "奖金数额",
+	"under": "小于",
+	"above": "大于"
   }
 
 }

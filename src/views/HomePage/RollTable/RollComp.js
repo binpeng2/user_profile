@@ -33,7 +33,7 @@ class RollComp extends Component {
   fetchDepositHistory = () =>{
 	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myFullBetsHistory?addr='+this.props.walletAddr)
     .then(res =>{
-		// console.log(res);
+		console.log(res);
 		this.setState({BetRecord:res.data.data});
 		// console.log(this.state.BetRecord);
     })
@@ -67,7 +67,7 @@ class RollComp extends Component {
 				  }
 				</Col>
                 <Col xs={5} >
-                  <p className="general-content"> {item.isUnder}</p>
+                  <p className="general-content"> {item.isUnder.slice(0,5)==="Under" ? this.props.languageFile.Roll.under: this.props.languageFile.Roll.above} {item.betNumber}</p>
                 </Col>
 				<Col xs={4} >
                   <p className="general-content"> {item.luckyNumber}</p>
