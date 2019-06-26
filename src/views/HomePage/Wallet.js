@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col,Input,Button,message} from'antd';
+import {Row, Col,Input,message} from'antd';
 import axios from 'axios';
 
 import './Wallet.css';
@@ -134,7 +134,7 @@ class Wallet extends Component{
 
     return(
       <div className="walletfetch" >
-      <Row type="flex" justify="space-between" align="left">
+      <Row type="flex" justify="space-between" >
         <Col span={2}>
 
         {
@@ -168,7 +168,7 @@ class Wallet extends Component{
       </Col>
       </Row>
 
-      <Row type="flex" justify="space-between" align="left">
+      <Row type="flex" justify="space-between">
       <Col span={21} offset={4.5}>
       
       </Col>

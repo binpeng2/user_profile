@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import './Gem.css';
 import GemTable from './GemTable.js';
-import { Divider } from 'antd';
 import { relative } from 'path';
-import {GetRequest} from "../../../component/APIRequest/APIRequest";
 import axios from 'axios';
 
 
@@ -34,7 +32,7 @@ class GemComp extends Component {
   }
 
   componentDidUpdate = (prevprops) =>{
-    if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
+    if(this.props.walletAddr !== "" && this.props.walletAddr !== prevprops.walletAddr){
       this.fetchDepositHistory();
     }
 
@@ -98,7 +96,7 @@ class GemComp extends Component {
     this.setState({
       record:this.state[listName]
     },()=>{
-	  if (this.props.walletAddr != '') {
+	  if (this.props.walletAddr !== '') {
 	  this.fetchDepositHistory(listName);
 	  }
     })

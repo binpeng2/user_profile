@@ -22,12 +22,12 @@ class GemTable extends Component {
 	var hours = date.getHours();
 	// Minutes part from the timestamp
 	var minutes = "0" + date.getMinutes();
-
+	let formattedTime = null;
 	if (month>10){
-	var formattedTime = year+' '+ month +day+' '+hours + ':' + minutes.substr(-2);
+	formattedTime = `${year} ${month}${day} ${hours}:${minutes.substr(-2)}`;
 	}
 	else{
-	var formattedTime = year+' '+ ' 0'+month +day+' '+hours + ':' + minutes.substr(-2);
+	formattedTime = `${year} 0${month}${day} ${hours}:${minutes.substr(-2)}`;
 	}
 	return formattedTime;
   }
@@ -38,7 +38,7 @@ class GemTable extends Component {
 	var x = window.matchMedia("(max-width: 800px)")
 	let table = null;
 	let title = null;
-    if(this.props.record && this.props.walletAddr != ''){
+    if(this.props.record && this.props.walletAddr !==''){
 	  if (this.props.tabs==="Gem") {
 		title = <p className="title-text">{this.props.languageFile.GemRush.gemRushRecord}</p>
 		table = (<List
@@ -89,7 +89,7 @@ class GemTable extends Component {
                 <Col xs={5} >
 
                 {
-      x.matches ?    
+      				x.matches ?    
                <p className="general-content"> {this.timeConverter(item.timestamp).slice(5)}</p >
          :
                         <p className="general-content"> {this.timeConverter(item.timestamp)}</p >
@@ -99,7 +99,7 @@ class GemTable extends Component {
                   <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{Math.round(item.amount * 100) / 100}&nbsp;WPT</p>
                 </Col>
 				          <Col xs={8} >
-                  <p className="gem-content transactionHashLink" > <a style={{color:'white'}} href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">{item.transferHash} </a></p>
+                  <p className="gem-content transactionHashLink" > <a style={{color:'white'}} href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank" rel="noopener noreferrer">{item.transferHash} </a></p>
                 </Col>
               </Row>
 

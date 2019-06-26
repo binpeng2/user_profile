@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import '../GemTable/Gem.css';
-import { Divider, Row, Col, List } from 'antd';
+import { Row, Col, List } from 'antd';
 import { relative } from 'path';
-import {GetRequest} from "../../../component/APIRequest/APIRequest";
 import axios from 'axios';
 
 const ColoredLine = ({ color }) => (
@@ -25,7 +24,7 @@ class RollComp extends Component {
   }
 
   componentDidUpdate = (prevprops) =>{
-	  if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
+	  if(this.props.walletAddr !== "" && this.props.walletAddr !== prevprops.walletAddr){
 	this.fetchDepositHistory();
 	  }
   }
@@ -44,7 +43,6 @@ class RollComp extends Component {
 
   render(){
 	let table = null;
-	let date = null;
 	var x = window.matchMedia("(max-width: 800px)")
 
 	if (this.state.BetRecord && this.props.walletAddr) {
