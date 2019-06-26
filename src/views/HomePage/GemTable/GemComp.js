@@ -22,7 +22,7 @@ const ColoredLine = ({ color }) => (
 class GemComp extends Component {
   constructor(props){
 	super(props);
-	
+
     this.state={
 	  tabs:"Gem",
 	  record: null,
@@ -37,7 +37,7 @@ class GemComp extends Component {
     if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
       this.fetchDepositHistory();
     }
-    
+
   }
 
   sum = (data) =>{
@@ -59,9 +59,9 @@ class GemComp extends Component {
       for (let i=0;i<res.data.data.length; i++) {
         sum += parseFloat(res.data.data[i].depositAmount);
       }
-    
+
       this.setState({totalInvest: sum});
-      
+
     })
     .catch(err =>{
       console.log(err)
@@ -73,7 +73,7 @@ class GemComp extends Component {
 	this.setState({InvestRecord: res.data.data});
 	// let sum = 0;
   // var i = 0;
-  
+
 	// for (i=0;i<res.data.data.length; i++) {
 	// 	sum += parseFloat(res.data.data[i].depositAmount);
   // }
@@ -92,7 +92,7 @@ class GemComp extends Component {
     .catch(err =>{
      console.log(err)
 	})
-} 
+}
 
   changeHistoryList = (listName) =>{
     this.setState({
@@ -106,7 +106,7 @@ class GemComp extends Component {
 
   render(){
     return(
-		
+
         <div align="middle">
           <div>
             <div className="TabsDiv">
@@ -116,13 +116,13 @@ class GemComp extends Component {
 			  <span className="Note">{this.props.languageFile.GemRush.gemRush}</span>
 			</div>
 			<div style={{position: relative, top:0, marginTop:0}}>
-			<ColoredLine color="white" />     
+			<ColoredLine color="white" />
 			</div>
-			<div>
+			   <div  className="gemTableContent">
             <GemTable walletAddr={this.props.walletAddr} totalInvest={this.state.totalInvest} totalWithdraw={this.state.totalWithdraw} languageFile={this.props.languageFile} tabs={this.state.tabs} record={this.state[this.state.tabs+"Record"]}/>
             </div>
           </div>
-		
+
         </div>
 
       )

@@ -116,7 +116,7 @@ class RollComp extends Component {
                   <p className="title-text">{this.props.languageFile.Roll.rewardAmount}</p>
                 </Col>
             </Row>
-			<div>
+			<div className ="betTableContect">
 		    {table}
             </div>
           </div>

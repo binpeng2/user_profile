@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col,Input,Button} from'antd';
+import {Row, Col,Input,Button,message} from'antd';
 import axios from 'axios';
 
 import './Wallet.css';
@@ -25,7 +25,7 @@ class Wallet extends Component{
 
     handleSubmit= async () => {
         const data= this.state.walletAddrInput
-        if(!data)alert("请输入正确钱包地址 \n Please input a valid wallet address!")
+        if(!data)message.warning("请输入正确钱包地址 \n Please input a valid wallet address!",3)
 
         let isValid = await this.accountValidate();
         console.log('valid',isValid)
@@ -44,7 +44,7 @@ class Wallet extends Component{
 
 
     };
-    
+
     // componentDidMount = () =>{
     //   this.fetchDepositHistory();
     //   }
@@ -68,7 +68,7 @@ class Wallet extends Component{
                 else{
                   resolve(true)
                 }
-                
+
             })
             .catch(err =>{
                 console.log(err);
@@ -76,7 +76,7 @@ class Wallet extends Component{
             })
         }
       })
-        
+
     }
 
     fetchDepositBalance = () =>{
@@ -93,7 +93,7 @@ class Wallet extends Component{
           },()=>{
             console.log(this.state.wiccBalance)
           })
-          
+
         })
         let payload2={
           "address": this.state.walletAddrInput,
@@ -106,13 +106,13 @@ class Wallet extends Component{
           this.setState({
             wptBalance:wpt.toFixed(2)
           })
-          
+
         })
 
 
       }
     }
-    
+
     // fetchDepositHistory = () =>{
     //   axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr=WjDxYcGuLWUm4tKZ8nz5NpUJJfMyNma9E1')
     //   .then(res =>{
@@ -122,7 +122,7 @@ class Wallet extends Component{
     //     console.log(err)
     //   })
     // }
-      
+
 
 
 
@@ -137,15 +137,17 @@ class Wallet extends Component{
       <Col span={21} >
       {/* <div className = "wallet-input"> */}
       <span className="address">{this.props.languageFile.wallet.walletAddress}:</span>
-        <Input 
-        value={this.state.walletAddrInput} 
+        <Input
+        value={this.state.walletAddrInput}
         onChange={this.handleInput.bind(this)}
+
         style={{width:'30%',marginLeft:'5%'}}
         /> 
         
         <span className = "playButton" onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
 
       <div className = "balance">
+
       <span>{this.props.languageFile.wallet.walletBalance}： </span> 
       <span className="wicc">{this.state.wiccBalance} WICC </span><br />
       <span style={{visibility: 'hidden'}}>{this.props.languageFile.wallet.walletBalance}： </span> 
@@ -163,8 +165,6 @@ class Wallet extends Component{
       </Row>
       
         
-
-
       </div>
     )
   }
