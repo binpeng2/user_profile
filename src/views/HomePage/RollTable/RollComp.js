@@ -24,8 +24,10 @@ class RollComp extends Component {
 	  }
   }
 
-  componentDidMount = () =>{
-    this.fetchDepositHistory();
+  componentDidUpdate = (prevprops) =>{
+	  if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
+	this.fetchDepositHistory();
+	  }
   }
 
   fetchDepositHistory = () =>{
@@ -49,10 +51,6 @@ class RollComp extends Component {
 		table = <List
 			size="small"
 			pagination={this.state.BetRecord.length > 10 ? {
-				simple: 1,
-				onChange: page => {
-					console.log(page);
-				},
 				pageSize: 10,
 			} : null}
      	    dataSource={this.state.BetRecord}

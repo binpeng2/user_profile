@@ -101,6 +101,11 @@ div.b{
   font-size: 0.8rem;
 }
 
+.TabsDiv{
+  line-height:1;
+  text-align: left;
+  padding-bottom: 0.2em;
+}
 
 .Note{
   float: right;
