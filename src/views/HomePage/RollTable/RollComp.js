@@ -40,7 +40,7 @@ class RollComp extends Component {
     .catch(err =>{
       console.log(err)
 	})
-  }   
+  }
 
   render(){
 	let table = null;
@@ -97,7 +97,7 @@ class RollComp extends Component {
 
 			</div>
 			<div style={{position: relative, top:0, marginTop:0}}>
-			<ColoredLine color="white" />     
+			<ColoredLine color="white" />
 			</div>
 			<Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
@@ -120,7 +120,7 @@ class RollComp extends Component {
 		    {table}
             </div>
           </div>
-		
+
         </div>
 
       )
