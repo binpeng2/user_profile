@@ -80,9 +80,24 @@ div.b{
   text-overflow: ellipsis;
 }
 
+.gemTableContent{
+  height: 457px;
+}
+
+.betTableContect{
+  height: 401px;
+}
 @media (max-width:800px){
   div.b{
 	height:17px;
+  }
+
+  .gemTableContent{
+    height: 311px;
+  }
+
+  .betTableContect{
+    height: 255px;
   }
 
   .TabsHighlighted{
