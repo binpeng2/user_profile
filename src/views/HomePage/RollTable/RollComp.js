@@ -42,6 +42,9 @@ class RollComp extends Component {
 
   render(){
 	let table = null;
+	let date = null;
+	var x = window.matchMedia("(max-width: 800px)")
+
 	if (this.state.BetRecord && this.props.walletAddr) {
 		table = <List
 			size="small"
@@ -58,8 +61,13 @@ class RollComp extends Component {
            	 <div>
               <Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
-                  <p className="general-content"> {item.timestamp.slice(0,4)+" "+item.timestamp.slice(5,7)+item.timestamp.slice(8,10)+" "+item.timestamp.slice(11,16)}</p>
-                </Col>
+				  {
+					x.matches ?                   <p className="general-content"> {item.timestamp.slice(5,7)+item.timestamp.slice(8,10)+" "+item.timestamp.slice(11,16)}</p>
+					:
+                             <p className="general-content"> {item.timestamp.slice(5,7)+item.timestamp.slice(8,10)+" "+item.timestamp.slice(11,16)}</p>
+
+				  }
+				</Col>
                 <Col xs={5} >
                   <p className="general-content"> {item.isUnder}</p>
                 </Col>

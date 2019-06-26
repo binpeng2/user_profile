@@ -1,7 +1,7 @@
 .TabsHighlighted{
   color: black !important;
   background-color: white;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border-radius: 5px 5px 0px 0px;
   padding: 0.4em 0.6em 0.35em 0.6em;
 }
@@ -10,8 +10,8 @@
   color: black !important;
   background-color: white;
   border-radius: 5px 5px 0px 0px;
-  padding: 0.4em 0.6em 0.4em 0.6em;
-  font-size: 1.25rem;
+  padding: 0.35em 0.55em 0.35em 0.55em;
+  font-size: 1.2rem;
 }
 
 .TabsDiv{
@@ -35,19 +35,19 @@ div.title{
 
 p.title-text{
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 p.gem-content{
 	color: white;
 	text-align: left;
-	font-size: 1.2em;
+	font-size: 1.15em;
 }
 
 p.general-content{
 	color: white;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.15em;
 }
 
 div.b{
@@ -59,4 +59,47 @@ div.b{
   div.b{
 	height:17px;
   }
+
+  .TabsHighlighted{
+  color: black !important;
+  background-color: white;
+  font-size: 0.9rem;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0.3em 0.5em 0.25em 0.5em;
+}
+
+.Tabs{
+  color: black !important;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0.25em 0.45em 0.25em 0.45em;
+  font-size: 0.8rem;
+}
+
+
+.Note{
+  float: right;
+  vertical-align: bottom;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0.4rem;
+}
+
+
+p.title-text{
+  color: white;
+  font-size: 0.85rem;
+}
+
+p.gem-content{
+	color: white;
+	text-align: left;
+	font-size: 0.75em;
+}
+
+p.general-content{
+	color: white;
+	text-align: center;
+	font-size: 0.75em;
+}
 }
