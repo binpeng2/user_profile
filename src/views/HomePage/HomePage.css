@@ -1,5 +1,5 @@
 div.blank{
-	height:200px;
+	height:100px;
 }
 
 .homePage{
@@ -88,7 +88,9 @@ div.blank{
   .GameTitle{
     margin-bottom: 15px;
   }
-
+	.user-image{
+		width: 0;
+	}
   .GameSection h2{
     font-size: 13px;
   }

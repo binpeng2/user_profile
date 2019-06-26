@@ -54,6 +54,31 @@ div.b{
 	height:35px;
 }
 
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link{
+  background-color: transparent !important;
+  color: grey !important;
+  border: none !important;
+}
+.ant-pagination-item{
+  background-color: transparent !important;
+  border: none !important;
+
+}
+
+
+.ant-pagination-item a{
+  color: grey !important;
+}
+
+.ant-pagination-item-active a{
+  color: white !important;
+}
+
+.transactionHashLink{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 @media (max-width:800px){
   div.b{
