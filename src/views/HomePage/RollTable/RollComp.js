@@ -38,7 +38,7 @@ class RollComp extends Component {
     .catch(err =>{
       console.log(err)
 	})
-  }   
+  }
 
   render(){
 	let table = null;
@@ -49,10 +49,6 @@ class RollComp extends Component {
 		table = <List
 			size="small"
 			pagination={this.state.BetRecord.length > 10 ? {
-				simple: 1,
-				onChange: page => {
-					console.log(page);
-				},
 				pageSize: 10,
 			} : null}
      	    dataSource={this.state.BetRecord}
@@ -99,7 +95,7 @@ class RollComp extends Component {
 
 			</div>
 			<div style={{position: relative, top:0, marginTop:0}}>
-			<ColoredLine color="white" />     
+			<ColoredLine color="white" />
 			</div>
 			<Row style={{marginBottom:'0',textAlign:'center'}}>
                 <Col xs={5} >
@@ -122,7 +118,7 @@ class RollComp extends Component {
 		    {table}
             </div>
           </div>
-		
+
         </div>
 
       )
