@@ -86,9 +86,12 @@
 	"gemFlow":"Gem flow",
 	"investmentRecord":"Investment record",
 	"gemRushRecord":"Gem Rush Record",
-  "withdraw": "Withdraw",
-  "totalInvest":"Total Invest",
-	"totalWithdraw": "Cumulative WPT withdrawal"
+    "withdraw": "Withdraw",
+    "totalInvest":"Total Invest",
+	"totalWithdraw": "Cumulative WPT withdrawal",
+	"buy": "Buy ",
+	"gem": "Gem",
+	"pay": "Pay"
   },
 
   "Roll":{

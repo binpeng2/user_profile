@@ -58,10 +58,10 @@ class GemTable extends Component {
                   <p className="general-content"> {this.timeConverter(item.timestamp)}</p>
                 </Col>
                 <Col xs={8} >
-                  <p className="general-content">{item.depositAmount>=10000 ? item.depositAmount*1.05:item.depositAmount}</p>
+                  <p className="general-content">{this.props.languageFile.GemRush.buy}&nbsp;{item.depositAmount>=10000 ? item.depositAmount*1.05:item.depositAmount}&nbsp;{this.props.languageFile.GemRush.gem}</p>
                 </Col>
                 <Col xs={8} >
-                  <p className="general-content">{item.depositAmount}</p>
+                  <p className="general-content">{this.props.languageFile.GemRush.pay}&nbsp;{item.depositAmount}&nbsp;WICC</p>
                 </Col>
               </Row>
             </div>
