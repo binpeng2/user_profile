@@ -101,7 +101,9 @@
 	"myPredict": "My Prediction",
 	"luckyNum": "Lucky Number",
 	"betAmount": "Bet Amount",
-	"rewardAmount": "Reward Amount"
+	"rewardAmount": "Reward Amount",
+	"under": "Under",
+	"above": "Above"
   }
 
   

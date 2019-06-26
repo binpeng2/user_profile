@@ -24,14 +24,16 @@ class RollComp extends Component {
 	  }
   }
 
-  componentDidMount = () =>{
-    this.fetchDepositHistory();
+  componentDidUpdate = (prevprops) =>{
+	  if(this.props.walletAddr != "" && this.props.walletAddr != prevprops.walletAddr){
+	this.fetchDepositHistory();
+	  }
   }
 
   fetchDepositHistory = () =>{
-	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myBetsHistory?addr='+this.props.walletAddr)
+	axios.get('https://backend.crazydogs.live:4001/api/luckynumber/myFullBetsHistory?addr='+this.props.walletAddr)
     .then(res =>{
-		// console.log(res);
+		console.log(res);
 		this.setState({BetRecord:res.data.data});
 		// console.log(this.state.BetRecord);
     })
@@ -65,7 +67,7 @@ class RollComp extends Component {
 				  }
 				</Col>
                 <Col xs={5} >
-                  <p className="general-content"> {item.isUnder}</p>
+                  <p className="general-content"> {item.isUnder.slice(0,5)==="Under" ? this.props.languageFile.Roll.under: this.props.languageFile.Roll.above} {item.betNumber}</p>
                 </Col>
 				<Col xs={4} >
                   <p className="general-content"> {item.luckyNumber}</p>
@@ -74,7 +76,7 @@ class RollComp extends Component {
                   <p className="general-content"> {item.betValue}</p>
                 </Col>
 				<Col xs={5} >
-                  <p className="general-content"> {item.payout}</p>
+                  <p className="general-content"> {Math.round(item.payout * 100) / 100}</p>
                 </Col>
               </Row>
             </div>
