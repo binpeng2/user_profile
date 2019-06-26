@@ -35,6 +35,7 @@ class GemTable extends Component {
 
 
   render(){
+	var x = window.matchMedia("(max-width: 800px)")
 	let table = null;
 	let title = null;
     if(this.props.record && this.props.walletAddr != ''){
@@ -86,7 +87,13 @@ class GemTable extends Component {
 
               <Row style={{marginBottom:'0',textAlign:'center'}} type="flex" justify="center" align="middle">
                 <Col xs={5} >
-                  <p className="gem-content"> {this.timeConverter(item.timestamp)}</p>
+
+                {
+      x.matches ?    
+               <p className="general-content"> {this.timeConverter(item.timestamp).slice(5)}</p >
+         :
+                        <p className="general-content"> {this.timeConverter(item.timestamp)}</p >
+    }
                 </Col>
                 <Col xs={8} >
                   <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{Math.round(item.amount * 100) / 100}&nbsp;WPT</p>

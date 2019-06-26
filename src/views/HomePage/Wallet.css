@@ -42,13 +42,13 @@ span.playButton:active{
 
     span.address{
         font-size: 1.1rem;
-        /* margin-left:-10%; */
+        margin-left:-13%;
     }
     .balance{
         font-size: 1.1rem;
         padding-bottom:10px;
         color:white;
-        /* margin-left:-10%; */
+        margin-left:-13%;
     }
 
     span.playButton{

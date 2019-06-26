@@ -128,11 +128,22 @@ class Wallet extends Component{
 
 
   render(){
+
+    var x = window.matchMedia("(max-width: 512px)")
+
     return(
       <div className="walletfetch" >
       <Row type="flex" justify="space-between" align="left">
         <Col span={2}>
-      <img src={require('../../assets/images/user-white.png')} alt="user"  className="user-image" style={{width:'100%'}} ></img>
+
+        {
+					x.matches ?  null
+					:
+          <img src={require('../../assets/images/user-white.png')} alt="user"  className="user-image" style={{width:'100%'}} ></img>
+
+				  }
+
+      {/* <img src={require('../../assets/images/user-white.png')} alt="user"  className="user-image" style={{width:'100%'}} ></img> */}
       </Col>
       <Col span={21} >
       {/* <div className = "wallet-input"> */}
