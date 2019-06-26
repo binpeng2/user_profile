@@ -7,7 +7,7 @@ class GemTable extends Component {
   constructor(props){
     super(props);
     this.state = {
-      
+
     }
   }
 
@@ -25,7 +25,7 @@ class GemTable extends Component {
 
 	if (month>10){
 	var formattedTime = year+' '+ month +day+' '+hours + ':' + minutes.substr(-2);
-	} 
+	}
 	else{
 	var formattedTime = year+' '+ ' 0'+month +day+' '+hours + ':' + minutes.substr(-2);
 	}
@@ -75,35 +75,31 @@ class GemTable extends Component {
 		table = (
 		<div>
 			<div className="b">
-		
+
 		</div>
 		<List
 			size="small"
-		
+
 			pagination={this.props.record.length > 10 ? {
-				simple: 1,
-				onChange: page => {
-					console.log(page);
-				},
 				pageSize: 10,
 			} : null}
      	    dataSource={this.props.record}
     	    renderItem={(item) =>{
       	    return (
            	 <div>
-			  <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">
-              <Row style={{marginBottom:'0',textAlign:'center'}}>
+
+              <Row style={{marginBottom:'0',textAlign:'center'}} type="flex" justify="center" align="middle">
                 <Col xs={5} >
                   <p className="gem-content"> {this.timeConverter(item.timestamp)}</p>
                 </Col>
-                <Col xs={6} >
+                <Col xs={8} >
                   <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{item.amount}&nbsp;WPT</p>
                 </Col>
-				<Col xs={13} >
-                  <p className="gem-content"> {item.transferHash} </p>
+				          <Col xs={8} >
+                  <p className="gem-content transactionHashLink"> <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">{item.transferHash} </a></p>
                 </Col>
               </Row>
-			  </a>
+
             </div>
           )
     		  } }
@@ -120,11 +116,11 @@ class GemTable extends Component {
 
     return(
       <div>
-        <div className="title"> 
+        <div className="title">
 		{title}
 		</div>
 		<div className="b">
-		
+
 		</div>
 		<div>
 		{table}
