@@ -1,56 +1,87 @@
 span.playButton{
     user-select: none;
     font-size:20px;
+    color:black;
     display: inline-block;
     text-align: center;
     margin-left:2%;
-    width:4%;
-    height:120%;
+    width:10%;
+
     border-radius: 8px;
-    background-image:linear-gradient(100deg,#D74C81, #AE84A0,  #93A8B4,#6DDCD2);
+    background-color:white;
   }
+span.playButton:hover{
+    cursor: pointer;
+    
+}
+span.playButton:active{
+    opacity: 0.8;
+}
 .wallet-input{
-    margin-left: -140%;
+    width:20%;
 }
 .address{
-    margin-left:5%;
+    margin-left:0%;
 }
 .balance{
-    margin-left: 20%;
+    margin-top: 5%;
     color:white;
 }
 .wicc{
+    margin-left:3%;
+    text-align: left;
+}
+.钱包余额{
     margin-left:5%;
     text-align: left;
 }
-.wpt{
+
+span.Wallet.Balance{
     margin-left:5%;
     text-align: left;
 }
+/* img.user-image{
+    display: block;
+    width:100%;
+
+} */
 
 
 
 @media screen and (max-width: 512px){
-    .address{
-        font-size: 0.8rem;
-        margin-left:5%;
+
+    span.address{
+        font-size: 1.15rem;
+        /* margin-left:-10%; */
     }
     .balance{
-        font-size: 0.8rem;
+        font-size: 1.15rem;
+        padding-bottom:10px;
         color:white;
+        /* margin-left:-10%; */
     }
+
     span.playButton{
         font-size:0.6em;
-        width:8%;
+        width:20%;
         margin-left:5%;
 
     }
-
-    .wallet-input{
-        margin-left: -100%;
-        /* width:10%; */
+ 
+    span.钱包余额{
+ 
+        margin-left:32%;
+        text-align: left;
     }
-
+    span.Wallet.Balance{
+ 
+        margin-left:47%;
+        text-align: left;
+    }
+    span.wallet-balance{
+        margin-left: 5%;
+        color:white;
+    }
 
  }
 

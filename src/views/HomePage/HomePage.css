@@ -1,5 +1,5 @@
 div.blank{
-	height:100px;
+	height:200px;
 }
 
 .homePage{
@@ -10,7 +10,7 @@ div.blank{
   background: url('../../assets/images/homePage/bg_bak.png') no-repeat;
   background-position: center;
   background-size: cover;
-  length: 100%;
+ 
   padding: 400px 50px 10px 50px;
 }
 
@@ -88,9 +88,7 @@ div.blank{
   .GameTitle{
     margin-bottom: 15px;
   }
-	.user-image{
-		width: 0;
-	}
+
   .GameSection h2{
     font-size: 13px;
   }

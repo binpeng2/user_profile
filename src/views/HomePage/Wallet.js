@@ -89,7 +89,7 @@ class Wallet extends Component{
         .then(res =>{
           let wicc = parseFloat(res.data.data.balance)/100000000
           this.setState({
-            wiccBalance:wicc
+            wiccBalance:wicc.toFixed(2)
           },()=>{
             console.log(this.state.wiccBalance)
           })
@@ -104,7 +104,7 @@ class Wallet extends Component{
           console.log('contract',re);
           let wpt = parseFloat(re.data.data.freevalues)/100000000
           this.setState({
-            wptBalance:wpt
+            wptBalance:wpt.toFixed(2)
           })
           
         })
@@ -130,34 +130,29 @@ class Wallet extends Component{
   render(){
     return(
       <div className="walletfetch" >
-      {/* <Row type="flex" justify="start">
-        <Col span={3} > */}
-      <img src={require('../../assets/images/user-white.png')} alt="user" width="8%" className="user-image" style={{float:"left",alignItems:'left'}}></img>
-      {/* </Col>
-      <Col span={15} > */}
-      <div className = "wallet-input">
+      <Row type="flex" justify="space-between" align="left">
+        <Col span={2}>
+      <img src={require('../../assets/images/user-white.png')} alt="user"  className="user-image" style={{width:'100%'}} ></img>
+      </Col>
+      <Col span={20} >
+      {/* <div className = "wallet-input"> */}
       <span className="address">{this.props.languageFile.wallet.walletAddress}:</span>
         <Input 
         value={this.state.walletAddrInput} 
         onChange={this.handleInput.bind(this)}
-        style={{width:'10%', height:'12%', marginLeft:"3%",marginBottom:"0%"}} /> 
+        style={{width:'30%',marginLeft:'5%'}}
+        /> 
         
         <span className = "playButton" onClick={this.handleSubmit.bind(this)}>{this.props.languageFile.wallet.query}</span><br />
-      </div><br />
+      {/* </div><br /> */}
       <div className = "balance">
       <span>{this.props.languageFile.wallet.walletBalance}： </span> 
       <span className="wicc">{this.state.wiccBalance} WICC </span>
-      <span className="wpt">{this.state.wptBalance} WPT</span></div>
+      <span className={this.props.languageFile.wallet.walletBalance}>{this.state.wptBalance} WPT</span></div>
         
-        {/* </Col>
-      </Row> */}
-      {/* <Row type="flex" justify="start"> */}
-        {/* <Col span={5} >
-      </Col> */}
-      {/* <Col span={8} offset={5} > */}
-      
-        {/* </Col>
-      </Row> */}
+      </Col>
+      </Row>
+
       </div>
     )
   }
