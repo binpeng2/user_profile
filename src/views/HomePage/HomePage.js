@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
 import './HomePage.css';
-import WalletCheck from './WalletCheck'
 import GemComp from "./GemTable/GemComp";
-
 import Wallet from './Wallet.js';
-
 import RollComp from "./RollTable/RollComp";
 
-// import RollComp from "./RollTable/RollComp";
+
 
 let languageFile = null;
 class HomePage extends Component{
@@ -25,7 +22,7 @@ class HomePage extends Component{
     this.setState({
         walletAddr : input.data
     }, ()=>{
-      console.log('homepage', this.state.walletAddr);
+      // console.log('homepage', this.state.walletAddr);
     })
     
   }
@@ -44,7 +41,7 @@ class HomePage extends Component{
             <div className="BackgroundSlogen">
             <Wallet languageFile={languageFile} onSubmit= {this.handleInputValue.bind(this)} />
             </div>
-            <WalletCheck walletAddr={this.state.walletAddr} languageFile={languageFile}/>
+            <GemComp walletAddr={this.state.walletAddr} languageFile={languageFile}/>
 		<div className="blank">
 		</div>
     <RollComp walletAddr={this.state.walletAddr} languageFile={languageFile}/>

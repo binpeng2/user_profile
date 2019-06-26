@@ -28,7 +28,7 @@ class Wallet extends Component{
         if(!data)message.warning("请输入正确钱包地址 \n Please input a valid wallet address!",3)
 
         let isValid = await this.accountValidate();
-        console.log('valid',isValid)
+        // console.log('valid',isValid)
         if(isValid){
             if(this.props.onSubmit){
                 this.props.onSubmit({data})
@@ -91,7 +91,8 @@ class Wallet extends Component{
           this.setState({
             wiccBalance:wicc.toFixed(2)
           },()=>{
-            console.log(this.state.wiccBalance)
+            // console.log(this.state.wiccBalance)
+
           })
 
         })
@@ -101,7 +102,7 @@ class Wallet extends Component{
         }
         axios.post('https://baas.wiccdev.org/v2/api/contract/getcontractaccountinfo',payload2)
         .then(re =>{
-          console.log('contract',re);
+          // console.log('contract',re);
           let wpt = parseFloat(re.data.data.freevalues)/100000000
           this.setState({
             wptBalance:wpt.toFixed(2)

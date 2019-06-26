@@ -53,7 +53,7 @@ class GemComp extends Component {
 
 	axios.get('https://backend.crazydogs.live:4001/api/towerdefense/myFullDepositHistory?addr='+this.props.walletAddr)
     .then(res =>{
-		console.log('full despoit',res);
+		// console.log('full despoit',res);
       this.setState({GemRecord:res.data.data});
       let sum = 0;
       for (let i=0;i<res.data.data.length; i++) {
