@@ -89,7 +89,7 @@ class GemTable extends Component {
                   <p className="gem-content"> {this.timeConverter(item.timestamp)}</p>
                 </Col>
                 <Col xs={8} >
-                  <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{item.amount}&nbsp;WPT</p>
+                  <p className="gem-content"> {this.props.languageFile.GemRush.withdraw}&nbsp;{Math.round(item.amount * 100) / 100}&nbsp;WPT</p>
                 </Col>
 				          <Col xs={8} >
                   <p className="gem-content transactionHashLink"> <a href={"https://www.waykiscan.com/#/txhash/"+ item.transferHash } target="_blank">{item.transferHash} </a></p>

@@ -76,7 +76,7 @@ class RollComp extends Component {
                   <p className="general-content"> {item.betValue}</p>
                 </Col>
 				<Col xs={5} >
-                  <p className="general-content"> {item.payout}</p>
+                  <p className="general-content"> {Math.round(item.payout * 100) / 100}</p>
                 </Col>
               </Row>
             </div>

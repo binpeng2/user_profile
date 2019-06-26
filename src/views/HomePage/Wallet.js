@@ -147,8 +147,8 @@ class Wallet extends Component{
       {/* </div><br /> */}
       <div className = "balance">
       <span>{this.props.languageFile.wallet.walletBalance}： </span> 
-      <span className="wicc">{this.state.wiccBalance} WICC </span>
-      <span className={this.props.languageFile.wallet.walletBalance}>{this.state.wptBalance} WPT</span></div>
+      <span className="wicc">{Math.round(this.state.wiccBalance * 100) / 100} WICC </span>
+      <span className={this.props.languageFile.wallet.walletBalance}>{Math.round(this.state.wptBalance * 100) / 100} WPT</span></div>
         
       </Col>
       </Row>
